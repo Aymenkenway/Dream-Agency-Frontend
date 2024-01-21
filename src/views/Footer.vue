@@ -174,4 +174,9 @@ export default {
     margin-bottom: 30px;
   }
 }
+@media (max-width: 1030px) {
+  .footer-contain {
+    margin-top: 50px;
+  }
+}
 </style>
