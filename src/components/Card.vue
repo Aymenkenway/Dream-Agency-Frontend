@@ -280,7 +280,7 @@ export default {
       if (window.innerWidth < 576) {
         return 1
       } else if (window.innerWidth < 1110) {
-        return 3
+        return 2
       } else if (window.innerWidth < 1495) {
         return 3
       } else {
