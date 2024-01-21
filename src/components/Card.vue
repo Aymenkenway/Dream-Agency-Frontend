@@ -1,7 +1,7 @@
 <template>
   <div>
     <swiper
-      :slides-per-view="4"
+      :slides-per-view="getSlidesPerView()"
       :space-between="50"
       :loop="true"
       :pagination="true"
@@ -81,6 +81,19 @@ export default {
     onSlideChange() {
       console.log('slide change')
     },
+    getSlidesPerView() {
+      // Adjust slides per view based on screen size
+      if (window.innerWidth < 576) {
+        return 1
+      } else if (window.innerWidth < 1110) {
+        return 2
+      } else if (window.innerWidth < 1495) {
+        return 3
+      }
+      {
+        return 4
+      }
+    },
   },
 }
 </script>
@@ -133,5 +146,16 @@ export default {
   line-height: 21.8px;
   font-family: 'Hind Vadodara', sans-serif;
   white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .box .rectangle {
+    width: 100%; /* Full width on smaller screens */
+  }
+  .title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
 }
 </style>

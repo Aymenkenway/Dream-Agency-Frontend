@@ -3,12 +3,16 @@
     <div
       class="right-hero flex flex-row justify-between flex-1 items-center ml-10"
     >
-      <div>
+      <div class="left-her-container">
         <p>
           <span class="we-help-you">We Help you</span>
-          <br />
-          <span class="grow-businnes">to grow your<br />Business</span>
+
+          <span class="grow-business"
+            ><p>to grow your</p>
+            <p>Business</p></span
+          >
         </p>
+
         <p class="lorem w-9/12 pt-8 pb-8">
           Lorem Ipsum has been the industry&#39;s standard dummy text ever since
           the 1500s, when an unknown printer took a galley of type and scrambled
@@ -39,13 +43,14 @@ export default {
 
 <style scoped>
 .we-help-you {
+  color: #331b3b;
   font-size: 87px;
   font-family: 'Hind Vadodara' sans-serif;
   font-weight: 700;
   line-height: 90px;
 }
 
-.grow-businnes {
+.grow-business {
   color: #331b3b;
   font-size: 87px;
   font-family: 'Hind Vadodara' sans-serif;
@@ -65,5 +70,50 @@ export default {
 .overlay-image {
   max-width: 55%;
   margin-right: 8%;
+}
+
+/* here screen */
+@media (max-width: 768px) {
+  .we-help-you,
+  .grow-business {
+    font-size: 40px; /* Adjust font size for smaller screens */
+    line-height: 55px; /* Adjust line height for smaller screens */
+  }
+
+  .lorem {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    line-height: 20px; /* Adjust line height for smaller screens */
+  }
+}
+
+@media (max-width: 520px) {
+  .left-hero {
+    display: none;
+  }
+  .right-hero {
+    margin-left: 0;
+  }
+  .left-her-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .we-help-you,
+  .grow-business {
+    font-size: 40px; /* Adjust font size for smaller screens */
+    line-height: 55px; /* Adjust line height for smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lorem {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    line-height: 20px; /* Adjust line height for smaller screens */
+    align-items: center;
+    padding-top: 20px;
+  }
 }
 </style>

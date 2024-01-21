@@ -7,10 +7,10 @@
       class="right-hero flex flex-row justify-between flex-1 items-center ml-10"
     >
       <div>
-        <p>
+        <p class="titles">
           <span class="we-help-you">Abous Us</span>
-          <br />
-          <span class="grow-businnes">Fake or Real</span>
+
+          <span class="grow-business">Fake or Real</span>
         </p>
         <p class="lorem w-9/12 mb-3 pt-4">
           Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -23,7 +23,9 @@
           1500s, when an unknown printer took a galley of type and scrambled it
           to make a type specimen book.
         </p>
-        <Button class="w-52 h-14" />
+        <div class="button-container">
+          <Button class="w-52 h-14" />
+        </div>
       </div>
     </div>
   </div>
@@ -47,7 +49,7 @@ export default {
   word-wrap: break-word;
 }
 
-.grow-businnes {
+.grow-business {
   color: #331b3b;
   font-size: 48px;
   font-family: Hind Vadodara;
@@ -67,5 +69,57 @@ export default {
 
 .overlay-image {
   max-width: 100%;
+}
+@media (max-width: 768px) {
+  .lorem {
+    width: 100%;
+  }
+  .aboutus-container {
+    flex-direction: row;
+  }
+  .we-help-you {
+    font-size: 40px;
+  }
+  .grow-business {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .grow-business {
+    margin-top: 0;
+    padding: 0;
+  }
+  .we-help-you {
+    margin: 0;
+    padding: 0;
+  }
+  .overlay-image {
+    display: none;
+  }
+  .right-hero {
+    align-items: center;
+    width: 80%;
+    margin: 0;
+  }
+
+  .aboutus-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>

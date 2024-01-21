@@ -1,6 +1,6 @@
 <template>
   <div class="swiper-contain ml-10">
-    <div class="pb-12 pt-12 flex flex-row justify-between">
+    <div class="sub-container pb-12 pt-12 flex flex-row justify-between">
       <div class="flex-1">
         <span class="OurRecentWork">Our Recent Work<br /></span
         ><span class="ByOurExperts">By Our Experts</span>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="flex flex-row justify-end">
-      <SecondCard class="h-full w-4/5" />
+      <SecondCard class="cards h-full w-4/5" />
     </div>
   </div>
 </template>
@@ -59,5 +59,44 @@ export default {
   line-height: 24.87px;
   letter-spacing: 0.34px;
   word-wrap: break-word;
+}
+@media (max-width: 768px) {
+  .swiper-contain {
+    background-position: left;
+    height: 600px;
+  }
+
+  .OurRecentWork {
+    font-size: 40px;
+  }
+  .ByOurExperts {
+    font-size: 40px;
+  }
+}
+@media (max-width: 520px) {
+  .swiper-contain {
+    margin: 80px 0px 0px 0px;
+  }
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  .flex-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .paragraph {
+    margin: 20px 0px 20px 0px;
+  }
+  .cards {
+    width: 100%;
+    margin-bottom: 100px;
+  }
 }
 </style>

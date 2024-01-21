@@ -51,4 +51,10 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
+@media (max-width: 1600px) {
+  .app {
+    overflow: hidden;
+  }
+}
 </style>

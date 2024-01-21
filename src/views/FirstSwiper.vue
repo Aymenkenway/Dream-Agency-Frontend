@@ -4,8 +4,8 @@
       <span class="what-we-do">What We Do<br /></span
       ><span class="for-you-business">For Your Business</span>
     </div>
-    <div class="flex flex-row justify-end">
-      <Card class="h-full w-4/5" />
+    <div class="card-container flex flex-row justify-end">
+      <Card class="card h-full w-4/5" />
     </div>
   </div>
 </template>
@@ -43,5 +43,34 @@ export default {
   font-weight: 300;
   line-height: 51.02px;
   word-wrap: break-word;
+}
+/* here screen */
+@media (max-width: 768px) {
+  .swiper-contain {
+    height: 400px;
+  }
+  .flex-row {
+    flex-direction: row; /* Change flex direction to column on smaller screens */
+  }
+
+  .card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 520px) {
+  .swiper-contain {
+    height: 400px;
+  }
+  .flex-row {
+    flex-direction: row; /* Change flex direction to column on smaller screens */
+  }
+
+  .card {
+    width: 85%;
+  }
+  .card-container {
+    justify-content: center;
+  }
 }
 </style>

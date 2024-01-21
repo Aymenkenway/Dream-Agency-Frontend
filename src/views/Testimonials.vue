@@ -1,10 +1,12 @@
 <template>
   <div class="testi-container flex flex-col justify-center items-center">
-    <div class="pb-12 flex flex-col items-center">
+    <div class="content pb-12 flex flex-col items-center">
       <span class="what-we-do">Our Testimonials<br /></span
-      ><span class="for-you-business">What Our Clients Are Saying</span>
+      ><span class="for-you-business"
+        >What Our Clients<span>Are Saying</span></span
+      >
     </div>
-    <div class="w-3/5 flex flex-row">
+    <div class="q-container w-3/5 flex flex-row">
       <div
         class="quote-container flex flex-col justify-between border items-start mr-8 p-6"
       >
@@ -104,5 +106,48 @@ export default {
   background: white;
   box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
   align-items: left;
+}
+@media (max-width: 1037px) {
+  .testi-container {
+    margin-top: 30px;
+  }
+  .q-container {
+    width: 90%;
+  }
+  .what-we-do {
+    font-size: 40px;
+  }
+  .for-you-business {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .testi-container {
+    margin-top: 200px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+  .for-you-business {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .q-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .quote-container {
+    margin: 0;
+    margin-top: 10px;
+  }
 }
 </style>

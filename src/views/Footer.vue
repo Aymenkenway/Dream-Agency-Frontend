@@ -1,6 +1,6 @@
 <template>
   <div class="footer-contain flex flex-row justify-between">
-    <div class="w-1/3 h-1/2 mt-16">
+    <div class="sub-container w-1/3 h-1/2 mt-16">
       <div
         class="quote-container flex flex-col justify-between items-start ml-10 p-6"
       >
@@ -14,7 +14,7 @@
           <p class="author">GET IN TOUCH</p>
         </div>
         <div
-          class="flex flex-row border w-full h-12 justify-between items-center"
+          class="button-container flex flex-row border w-full h-12 justify-between items-center"
         >
           <div class="email bg-black h-full flex flex-col justify-center pl-4">
             <p>ENTER YOUR EMAIL</p>
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="w-1/3 mt-16 mr-32">
+    <div class="map w-1/3 mt-16 mr-32">
       <div>
         <MapComponent />
       </div>
@@ -110,5 +110,67 @@ export default {
   line-height: 25.49px;
   letter-spacing: 0.32px;
   word-wrap: break-word;
+}
+@media (max-width: 836px) {
+  .footer-contain {
+    justify-content: space-between;
+  }
+  .dream-agency {
+    font-size: 25px;
+  }
+  .paragraph {
+    font-size: 10px;
+    margin: 5px 0px 0px 0px;
+  }
+  .button-container {
+    height: 10%;
+  }
+  .email p {
+    font-size: 11px;
+  }
+  .send p {
+    font-size: 11px;
+  }
+  .author {
+    font-size: 12px;
+    margin: 0;
+  }
+  .map {
+    width: 300px;
+    margin-right: 10%;
+  }
+}
+@media (max-width: 520px) {
+  .footer-contain {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+  }
+  .quote-container {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+  }
+  .dream-agency {
+    align-items: center;
+  }
+  .sub-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 25%;
+    padding: 0;
+    width: 100%;
+  }
+  .map {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
 }
 </style>
