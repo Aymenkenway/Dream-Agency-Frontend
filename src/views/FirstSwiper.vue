@@ -30,7 +30,7 @@ export default {
 .what-we-do {
   color: #331b3b;
   font-size: 48px;
-  font-family: Hind Vadodara;
+  font-family: 'Hind Vadodara', sans-serif;
   font-weight: 700;
   line-height: 51.02px;
   word-wrap: break-word;
@@ -39,7 +39,7 @@ export default {
 .for-you-business {
   color: #331b3b;
   font-size: 48px;
-  font-family: Hind Vadodara;
+  font-family: 'Hind Vadodara', sans-serif;
   font-weight: 300;
   line-height: 51.02px;
   word-wrap: break-word;
@@ -59,18 +59,26 @@ export default {
 }
 
 @media (max-width: 520px) {
+  .card {
+    width: 90%;
+  }
   .swiper-contain {
     height: 400px;
+    padding-top: 30px;
+    border-top-right-radius: 158px;
   }
   .flex-row {
     flex-direction: row; /* Change flex direction to column on smaller screens */
   }
 
-  .card {
-    width: 85%;
-  }
   .card-container {
     justify-content: center;
+  }
+  .what-we-do {
+    font-size: 40px;
+  }
+  .for-you-business {
+    font-size: 40px;
   }
 }
 </style>

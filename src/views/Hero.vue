@@ -8,8 +8,8 @@
           <span class="we-help-you">We Help you</span>
 
           <span class="grow-business"
-            ><p>to grow your</p>
-            <p>Business</p></span
+            ><p class="to-grow">to grow your</p>
+            <p class="business">Business</p></span
           >
         </p>
 
@@ -114,6 +114,13 @@ export default {
     line-height: 20px; /* Adjust line height for smaller screens */
     align-items: center;
     padding-top: 20px;
+  }
+}
+@media (max-width: 1030px) {
+  .we-help-you,
+  .grow-business {
+    font-size: 70px; /* Adjust font size for smaller screens */
+    line-height: 80px; /* Adjust line height for smaller screens */
   }
 }
 </style>

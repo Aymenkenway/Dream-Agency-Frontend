@@ -1,52 +1,62 @@
 <template>
-  <div>
-    <swiper
-      :slides-per-view="getSlidesPerView()"
-      :space-between="50"
-      :loop="true"
-      :pagination="true"
-      :navigation="true"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
-    >
-      <swiper-slide v-for="(slide, index) in slides" :key="index">
-        <div class="box">
-          <div class="rectangle">
-            <div
-              class="image"
-              :style="{ backgroundImage: `url(${slide.image})` }"
-            ></div>
-            <h1 class="title">{{ slide.title }}</h1>
-          </div>
-          <div class="sub-rectangle">
-            <div
-              class="image"
-              :style="{ backgroundImage: `url(${slide.image})` }"
-            ></div>
-            <div class="view">View Work</div>
+  <div class="main-container flex flex-row justify-between items-center">
+    <div class="buttons flex flex-col justify-end h-full mr-12">
+      <div class="flex flex-row justify-between">
+        <div class="backward mr-3 w-11 h-11" @click="goBackward"></div>
+        <div class="forward ml-3 w-11 h-11" @click="goForward"></div>
+      </div>
+    </div>
+    <div ref="swiper" class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" v-for="(slide, index) in slides" :key="index">
+          <div class="box">
+            <div class="rectangle">
+              <div
+                class="image"
+                :style="{ backgroundImage: `url(${slide.image})` }"
+              ></div>
+              <h1 class="title">{{ slide.title }}</h1>
+            </div>
+            <div class="sub-rectangle">
+              <div
+                class="image"
+                :style="{ backgroundImage: `url(${slide.image})` }"
+              ></div>
+              <div class="view">View Work</div>
+            </div>
           </div>
         </div>
-      </swiper-slide>
-    </swiper>
+      </div>
+      <!-- If we need pagination -->
+    </div>
   </div>
 </template>
 
 <script>
-import SwiperCore, { Navigation, Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper-vue2'
-
-// Import Swiper styles
-import 'swiper/swiper-bundle.css'
-
-SwiperCore.use([Navigation, Pagination])
+// import Swiper core and required modules
+import Swiper, { Navigation, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
+  name: 'SecondCardComponent',
+
+  mounted() {
+    this.initSwiper()
+    window.addEventListener('resize', this.handleResize)
   },
+
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
   data() {
     return {
+      menuOpen: false,
+      swiper: null,
       slides: [
         {
           title: 'UI Soup',
@@ -73,18 +83,35 @@ export default {
   },
 
   methods: {
-    onSwiper(swiper) {
-      console.log(swiper)
+    initSwiper() {
+      this.swiper = new Swiper(this.$refs.swiper, {
+        modules: [Navigation, Pagination],
+        loop: true,
+
+        slidesPerView: this.getSlidesPerView(),
+        spaceBetween: 150,
+      })
     },
-    onSlideChange() {
-      console.log('slide change')
+    goForward() {
+      if (this.swiper) {
+        this.swiper.slideNext()
+        console.log('hello')
+      }
+    },
+
+    goBackward() {
+      if (this.swiper) {
+        this.swiper.slidePrev()
+      }
     },
     getSlidesPerView() {
       // Adjust slides per view based on screen size
       if (window.innerWidth < 576) {
         return 1
-      } else if (window.innerWidth < 1495) {
+      } else if (window.innerWidth < 1110) {
         return 2
+      } else if (window.innerWidth < 1495) {
+        return 3
       } else {
         return 4
       }
@@ -94,6 +121,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.forward {
+  border: 1px solid black;
+  border-radius: 9999px;
+  background-image: url(../assets/icons/backward.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+.backward {
+  border: 1px solid black;
+  border-radius: 9999px;
+  background-image: url(../assets/icons/backward.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transform: scaleX(-1);
+}
 .box {
   padding: 10px 10px 0px 10px;
   display: flex;
@@ -161,5 +205,22 @@ export default {
 }
 
 @media (max-width: 575px) {
+  .box .rectangle {
+    width: 100%;
+    margin-right: 30px;
+  }
+  .buttons {
+    margin: 2px;
+  }
+  .backward {
+    margin-right: 2px;
+  }
+  .forward {
+    margin-left: 10px;
+  }
+  .box {
+    width: 99%;
+    height: 300px;
+  }
 }
 </style>

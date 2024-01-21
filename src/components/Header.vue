@@ -1,17 +1,37 @@
 <template>
   <div class="main-container flex flex-row items-stretch justify-between">
-    <ul class="links flex flex-row justify-evenly flex-1 items-center ml-2">
+    <ul
+      v-if="!showHamburger"
+      class="links flex flex-row justify-evenly flex-1 items-center ml-2"
+    >
       <li>Home</li>
       <li>About US</li>
       <li>Services</li>
       <li>Contact Us</li>
     </ul>
+    <div
+      v-if="showHamburger"
+      class="humburger flex flex-row justify-evenly flex-1 items-center"
+    >
+      <ScaleRotate disableEsc>
+        <li>Home</li>
+        <li>About US</li>
+        <li>Services</li>
+        <li>Contact Us</li>
+        <li>Facebook</li>
+        <li>LinkedIn</li>
+        <li>Instagram</li>
+      </ScaleRotate>
+    </div>
 
     <div class="brand flex flex-row justify-evenly flex-1 items-center">
       <h1>Dream Agency</h1>
     </div>
 
-    <div class="icons flex flex-row justify-end gap-4 flex-1 mr-14">
+    <div
+      v-if="!showHamburger"
+      class="icons flex flex-row justify-end gap-4 flex-1 mr-14"
+    >
       <div class="icons-border flex flex-row justify-center">
         <img class="icon" src="../assets/icons/facebook.png" alt="Facebook" />
       </div>
@@ -26,8 +46,27 @@
 </template>
 
 <script>
+import { ScaleRotate } from 'vue-burger-menu'
 export default {
   name: 'HeaderComponent',
+  components: { ScaleRotate },
+  data() {
+    return {
+      showHamburger: false,
+    }
+  },
+  mounted() {
+    this.checkScreenWidth()
+    window.addEventListener('resize', this.checkScreenWidth)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkScreenWidth)
+  },
+  methods: {
+    checkScreenWidth() {
+      this.showHamburger = window.innerWidth <= 1030
+    },
+  },
 }
 </script>
 
@@ -112,9 +151,16 @@ export default {
   }
 }
 @media (max-width: 520px) {
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
   .brand {
     font-size: 12px;
     padding: 0;
+    display: flex;
+    justify-content: start;
   }
   .icons-border {
     align-items: center;
@@ -132,6 +178,21 @@ export default {
   .links {
     font-size: 9px;
     flex: 100px;
+  }
+  .brand {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    align-items: end;
+    font-size: 17px;
+  }
+}
+@media (max-width: 1030px) {
+  .brand {
+    font-size: 30px;
+    padding: 0;
+    justify-content: center;
+    flex: 100%;
   }
 }
 </style>

@@ -3,7 +3,7 @@
     <HeaderComponent class="mt-8 mb-8" />
     <HeroView />
     <FirstSwiper class="mt-20" />
-    <AboutUs class="mt-20" />
+    <AboutUs class="mt-12" />
     <RecentWork class="mt-20" />
     <Testimonials class="mt-20" />
     <Footer class="mt-20" />
@@ -14,7 +14,6 @@
 import HeaderComponent from './components/Header.vue'
 import HeroView from './views/Hero.vue'
 import AboutUs from './views/AboutUs.vue'
-
 import FirstSwiper from './views/FirstSwiper.vue'
 import RecentWork from './views/RecentWork.vue'
 import Testimonials from './views/Testimonials.vue'

@@ -1,7 +1,7 @@
 <template>
-  <div class="swiper-contain ml-10">
+  <div class="swiper-contain">
     <div class="sub-container pb-12 pt-12 flex flex-row justify-between">
-      <div class="flex-1">
+      <div class="flex-1 ml-10">
         <span class="OurRecentWork">Our Recent Work<br /></span
         ><span class="ByOurExperts">By Our Experts</span>
       </div>
@@ -32,12 +32,13 @@ export default {
   background-image: url('../assets/icons/swiper-background2.png');
   background-repeat: no-repeat;
   background-position: right;
+  border-top-left-radius: 158px;
   height: 500px;
 }
 .OurRecentWork {
   color: #331b3b;
   font-size: 48px;
-  font-family: Hind Vadodara;
+  font-family: 'Hind Vadodara', sans-serif;
   font-weight: 700;
   line-height: 51.02px;
   word-wrap: break-word;
@@ -46,7 +47,7 @@ export default {
 .ByOurExperts {
   color: #331b3b;
   font-size: 48px;
-  font-family: Hind Vadodara;
+  font-family: 'Hind Vadodara', sans-serif;
   font-weight: 300;
   line-height: 51.02px;
   word-wrap: break-word;
@@ -54,7 +55,7 @@ export default {
 .paragraph {
   color: #331b3b;
   font-size: 17px;
-  font-family: Hind Vadodara;
+  font-family: 'Hind Vadodara', sans-serif;
   font-weight: 400;
   line-height: 24.87px;
   letter-spacing: 0.34px;

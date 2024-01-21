@@ -7,11 +7,10 @@
       class="right-hero flex flex-row justify-between flex-1 items-center ml-10"
     >
       <div>
-        <p class="titles">
-          <span class="we-help-you">Abous Us</span>
-
-          <span class="grow-business">Fake or Real</span>
-        </p>
+        <div class="titles">
+          <span class="we-help-you">Abous Us<br /></span
+          ><span class="grow-business">Fake or Real</span>
+        </div>
         <p class="lorem w-9/12 mb-3 pt-4">
           Lorem Ipsum has been the industry's standard dummy text ever since the
           1500s, when an unknown printer took a galley of type and scrambled it
@@ -114,12 +113,17 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
   }
   .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+  }
+  .lorem {
+    padding: 0;
   }
 }
 </style>

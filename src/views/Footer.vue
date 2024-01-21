@@ -145,12 +145,12 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 215px;
   }
   .quote-container {
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 200px;
   }
   .dream-agency {
     align-items: center;
@@ -171,6 +171,7 @@ export default {
     height: 300px;
     margin-top: 30px;
     margin-left: 30px;
+    margin-bottom: 30px;
   }
 }
 </style>
