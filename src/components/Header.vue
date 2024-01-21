@@ -150,7 +150,7 @@ export default {
     margin-right: 10px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 590px) {
   .main-container {
     display: flex;
     justify-content: space-between;
@@ -159,6 +159,7 @@ export default {
   .brand {
     font-size: 12px;
     padding: 0;
+    margin-left: 20%;
     display: flex;
     justify-content: start;
   }

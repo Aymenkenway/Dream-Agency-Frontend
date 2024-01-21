@@ -1,7 +1,7 @@
 <template>
   <div class="swiper-contain">
     <div class="sub-container pb-12 pt-12 flex flex-row justify-between">
-      <div class="flex-1 ml-10">
+      <div class="titles flex-1 ml-10">
         <span class="OurRecentWork">Our Recent Work<br /></span
         ><span class="ByOurExperts">By Our Experts</span>
       </div>
@@ -74,7 +74,7 @@ export default {
     font-size: 40px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 590px) {
   .swiper-contain {
     margin: 80px 0px 0px 0px;
   }
@@ -99,9 +99,12 @@ export default {
     width: 100%;
     margin-bottom: 100px;
   }
+  .titles {
+    margin: 0;
+  }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 2000px) {
   .swiper-contain {
     background-position: left;
     height: 550px;

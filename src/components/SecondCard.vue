@@ -1,7 +1,9 @@
 <template>
-  <div class="main-container flex flex-row justify-between items-center">
+  <div
+    class="main-container flex flex-row justify-between items-center md:items-end"
+  >
     <div class="buttons flex flex-col justify-end h-full mr-12">
-      <div class="flex flex-row justify-between">
+      <div class="btns flex flex-row">
         <div class="backward mr-3 w-11 h-11" @click="goBackward"></div>
         <div class="forward ml-3 w-11 h-11" @click="goForward"></div>
       </div>
@@ -204,13 +206,15 @@ export default {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 590px) {
   .box .rectangle {
     width: 100%;
-    margin-right: 30px;
+  }
+  .btns {
+    margin-left: 20px;
   }
   .buttons {
-    margin: 2px;
+    width: 30%;
   }
   .backward {
     margin-right: 2px;

@@ -4,8 +4,8 @@
       <span class="what-we-do">What We Do<br /></span
       ><span class="for-you-business">For Your Business</span>
     </div>
-    <div class="card-container flex flex-row justify-end">
-      <Card class="card h-full w-4/5" />
+    <div class="card-container w-11/12 flex flex-row self-end">
+      <Card class="card h-full md:w-full" />
     </div>
   </div>
 </template>

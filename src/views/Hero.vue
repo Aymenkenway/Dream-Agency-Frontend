@@ -3,7 +3,7 @@
     <div
       class="right-hero flex flex-row justify-between flex-1 items-center ml-10"
     >
-      <div class="left-her-container">
+      <div class="left-hero-container">
         <p>
           <span class="we-help-you">We Help you</span>
 
@@ -86,20 +86,24 @@ export default {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 590px) {
   .left-hero {
     display: none;
   }
   .right-hero {
     margin-left: 0;
-  }
-  .left-her-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .we-help-you,
+  .left-hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .grow-business {
     font-size: 40px; /* Adjust font size for smaller screens */
     line-height: 55px; /* Adjust line height for smaller screens */
@@ -108,7 +112,9 @@ export default {
     justify-content: center;
     align-items: center;
   }
-
+  .we-help-you {
+    font-size: 20px;
+  }
   .lorem {
     font-size: 14px; /* Adjust font size for smaller screens */
     line-height: 20px; /* Adjust line height for smaller screens */
@@ -119,7 +125,7 @@ export default {
 @media (max-width: 1030px) {
   .we-help-you,
   .grow-business {
-    font-size: 70px; /* Adjust font size for smaller screens */
+    font-size: 50px; /* Adjust font size for smaller screens */
     line-height: 80px; /* Adjust line height for smaller screens */
   }
 }

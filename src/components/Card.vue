@@ -280,7 +280,7 @@ export default {
       if (window.innerWidth < 576) {
         return 1
       } else if (window.innerWidth < 1110) {
-        return 2
+        return 3
       } else if (window.innerWidth < 1495) {
         return 3
       } else {
@@ -313,10 +313,10 @@ export default {
 .box .rectangle {
   background: white;
   width: 300px;
-  height: 180px;
+  height: 170px;
   border-radius: 20px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.05);
-  padding: 10px 0px 0px 10px;
+  padding: 10px 10px 10px 10px;
 }
 .small-box {
   width: 52px;
@@ -374,8 +374,8 @@ export default {
     flex-direction: column;
     background: white;
     width: 100%;
-    height: 190px;
-    padding: 20px;
+    height: 100%;
+    padding: 15px 15px 13px 15px;
   }
 
   .buttons {

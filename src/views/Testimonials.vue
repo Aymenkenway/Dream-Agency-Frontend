@@ -122,7 +122,7 @@ export default {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 590px) {
   .testi-container {
     margin-top: 200px;
   }
@@ -144,6 +144,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
   }
   .quote-container {
     margin: 0;

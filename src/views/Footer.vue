@@ -56,7 +56,7 @@ export default {
 .paragraph {
   color: white;
   font-size: 16px;
-  font-family: Hind Vadodara;
+  font-family: 'Hind Vadodara', sans-serif;
   font-weight: 400;
   line-height: 25.49px;
   letter-spacing: 0.32px;
@@ -172,11 +172,6 @@ export default {
     margin-top: 30px;
     margin-left: 30px;
     margin-bottom: 30px;
-  }
-}
-@media (max-width: 1030px) {
-  .footer-contain {
-    margin-top: 50px;
   }
 }
 </style>
