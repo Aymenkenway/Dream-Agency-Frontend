@@ -1,6 +1,6 @@
 <template>
   <div class="swiper-contain">
-    <div class="sub-container pb-12 pt-12 flex flex-row justify-between">
+    <div class="sub-container pb-8 pt-5 flex flex-row justify-between">
       <div class="titles flex-1 ml-10">
         <span class="OurRecentWork">Our Recent Work<br /></span
         ><span class="ByOurExperts">By Our Experts</span>
