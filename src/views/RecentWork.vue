@@ -103,11 +103,4 @@ export default {
     margin: 0;
   }
 }
-
-@media (max-width: 2000px) {
-  .swiper-contain {
-    background-position: left;
-    height: 550px;
-  }
-}
 </style>
