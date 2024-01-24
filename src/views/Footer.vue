@@ -1,177 +1,75 @@
 <template>
-  <div class="footer-contain flex flex-row justify-between">
-    <div class="sub-container w-1/3 h-1/2 mt-16">
-      <div
-        class="quote-container flex flex-col justify-between items-start ml-10 p-6"
-      >
-        <h1 class="dream-agency">Dream Agency</h1>
-        <p class="paragraph my-4">
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book. It has survived not only five centuries.
-        </p>
-        <div class="flex flex-row items-center my-4">
-          <p class="author">GET IN TOUCH</p>
-        </div>
-        <div
-          class="button-container flex flex-row border w-full h-12 justify-between items-center"
+  <footer
+    class="mx-auto flex w-5/6 flex-col items-center justify-between gap-10 py-8 text-black md:flex-row md:gap-0 md:py-16 lg:w-3/4"
+  >
+    <h3 class="text-[22px] font-bold">Let's Connect</h3>
+    <div class="text-grey flex items-center justify-between gap-6">
+      <a href="https://instagram.com"
+        ><svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          height="22"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div class="email bg-black h-full flex flex-col justify-center pl-4">
-            <p>ENTER YOUR EMAIL</p>
-          </div>
-
-          <div
-            class="send w-1/3 h-full bg-white flex flex-col justify-center items-center"
-          >
-            <p>SEND</p>
-          </div>
-        </div>
-      </div>
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+          ></path></svg></a
+      ><a href="https://youtube.com"
+        ><svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          height="22"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+          ></path></svg></a
+      ><a href="https://dribbble.com"
+        ><svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          height="22"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z"
+          ></path></svg
+      ></a>
     </div>
-    <div class="map w-1/3 mt-16 mr-32">
-      <div>
-        <MapComponent />
-      </div>
-    </div>
-  </div>
+    <button class="flex items-center gap-1">
+      Back to Top<svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 16 16"
+        class="dark:text-cyan"
+        height="24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"
+        ></path>
+      </svg>
+    </button>
+  </footer>
 </template>
 
 <script>
-import MapComponent from '../components/Map.vue'
 export default {
   name: 'FooterView',
-  components: {
-    MapComponent,
-    // added
-  },
 }
 </script>
 
-<style scoped>
-.footer-contain {
-  background-color: black;
-  border-top-right-radius: 158px;
-  padding-bottom: 15px;
-}
-.paragraph {
-  color: white;
-  font-size: 16px;
-  font-family: 'Hind Vadodara', sans-serif;
-  font-weight: 400;
-  line-height: 25.49px;
-  letter-spacing: 0.32px;
-  word-wrap: break-word;
-}
-.author {
-  color: white;
-  font-size: 16px;
-  font-family: Hind Vadodara;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 25.49px;
-  letter-spacing: 0.32px;
-  word-wrap: break-word;
-}
-
-.quote-container {
-  width: 100%;
-  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
-  align-items: left;
-}
-.dream-agency {
-  color: white;
-  font-size: 36px;
-  font-family: Playfair Display;
-  font-weight: 700;
-  letter-spacing: 0.36px;
-  word-wrap: break-word;
-}
-.email {
-  width: 100%;
-  height: 100%;
-  border: 1px white solid;
-}
-.email p {
-  color: white;
-  font-size: 16px;
-  font-family: Hind Vadodara;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 25.49px;
-  letter-spacing: 0.32px;
-  word-wrap: break-word;
-}
-.send p {
-  color: black;
-  font-size: 16px;
-  font-family: Hind Vadodara;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 25.49px;
-  letter-spacing: 0.32px;
-  word-wrap: break-word;
-}
-@media (max-width: 836px) {
-  .footer-contain {
-    justify-content: space-between;
-  }
-  .dream-agency {
-    font-size: 25px;
-  }
-  .paragraph {
-    font-size: 10px;
-    margin: 5px 0px 0px 0px;
-  }
-  .button-container {
-    height: 10%;
-  }
-  .email p {
-    font-size: 11px;
-  }
-  .send p {
-    font-size: 11px;
-  }
-  .author {
-    font-size: 12px;
-    margin: 0;
-  }
-  .map {
-    width: 300px;
-    margin-right: 10%;
-  }
-}
-@media (max-width: 520px) {
-  .footer-contain {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 215px;
-  }
-  .quote-container {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-  }
-  .dream-agency {
-    align-items: center;
-  }
-  .sub-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    margin-left: 25%;
-    padding: 0;
-    width: 100%;
-  }
-  .map {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-  }
-}
-</style>
+<style scoped></style>
